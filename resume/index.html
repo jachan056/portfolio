@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jane Doe: CV / Resume</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+        line-height: 1.6;
+        color: #222;
+      }
+
+      nav {
+        margin-bottom: 2rem;
+      }
+
+      nav a {
+        margin-right: 1.25rem;
+        text-decoration: none;
+        color: #1a7a5e;
+        font-size: 0.95rem;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        border-left: 4px solid #1a7a5e;
+        padding-left: 1rem;
+        margin-bottom: 2.5rem;
+      }
+
+      header h1 {
+        margin: 0 0 0.25rem;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+
+      header p {
+        margin: 0.2rem 0;
+        color: #555;
+        font-size: 0.95rem;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #1a7a5e;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.3rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      article {
+        display: flex;
+        gap: 1.25rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .entry-date {
+        min-width: 100px;
+        font-size: 0.85rem;
+        color: #777;
+        padding-top: 2px;
+        text-align: right;
+        flex-shrink: 0;
+      }
+
+      .entry-content {
+        flex: 1;
+      }
+
+      .entry-content h3 {
+        margin: 0 0 2px;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .entry-content .org {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 0.3rem;
+      }
+
+      .entry-content p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #444;
+      }
+
+      .entry-content ul {
+        margin: 0.25rem 0 0;
+        padding-left: 1.25rem;
+        font-size: 0.9rem;
+        color: #444;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0;
+        list-style: none;
+        margin: 0;
+      }
+
+      .skills-list li {
+        background: #e6f5f0;
+        color: #0f6e56;
+        font-size: 0.85rem;
+        padding: 4px 12px;
+        border-radius: 20px;
+      }
+
+      footer {
+        margin-top: 3rem;
+        font-size: 0.8rem;
+        color: #aaa;
+        border-top: 1px solid #eee;
+        padding-top: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Navigation menu -->
+    <nav>
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/contact/">Contact</a>
+      <a href="/cv/">CV</a>
+      <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub ↗</a>
+    </nav>
+
+    <!-- Page header with your name and contact info -->
+    <header>
+      <h1>Jane Doe</h1>
+      <p>📧 jane@email.com</p>
+      <p>📍 San Diego, CA</p>
+      <p>🔗 <a href="https://github.com/YOUR_USERNAME" target="_blank">github.com/janedoe</a></p>
+      <p>Data science student passionate about visualization and storytelling with data.</p>
+    </header>
+
+    <main>
+
+      <!-- Education Section -->
+      <section>
+        <h2>Education</h2>
+
+        <article>
+          <div class="entry-date">
+            <time datetime="2022">2022</time> –
+            <time datetime="2026">2026</time>
+          </div>
+          <div class="entry-content">
+            <h3>B.S. Data Science</h3>
+            <p class="org">University of California San Diego</p>
+            <p>GPA: 3.8 · Relevant coursework: DSC 106, DSC 80, DSC 100, CSE 101</p>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Experience Section -->
+      <section>
+        <h2>Experience</h2>
+
+        <article>
+          <div class="entry-date">
+            <time datetime="2025-06">Jun 2025</time> –
+            <time datetime="2025-09">Sep 2025</time>
+          </div>
+          <div class="entry-content">
+            <h3>Data Science Intern</h3>
+            <p class="org">Some Cool Company · San Francisco, CA</p>
+            <ul>
+              <li>Built interactive dashboards using D3.js and Python</li>
+              <li>Reduced reporting time by 40% through automated pipelines</li>
+            </ul>
+          </div>
+        </article>
+
+        <article>
+          <div class="entry-date">
+            <time datetime="2024-01">Jan 2024</time> –
+            present
+          </div>
+          <div class="entry-content">
+            <h3>Undergraduate Research Assistant</h3>
+            <p class="org">UCSD Cognitive Science Lab</p>
+            <ul>
+              <li>Assisted with data collection and cleaning for HCI studies</li>
+              <li>Wrote Python scripts for statistical analysis</li>
+            </ul>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Projects Section -->
+      <section>
+        <h2>Projects</h2>
+
+        <article>
+          <div class="entry-date">
+            <time datetime="2025">Spring 2025</time>
+          </div>
+          <div class="entry-content">
+            <h3>Climate Change Visualization</h3>
+            <p class="org">DSC 106 Final Project · <a href="#">Live site</a></p>
+            <p>Interactive D3.js scrollytelling piece exploring 50 years of global temperature data.</p>
+          </div>
+        </article>
+
+        <article>
+          <div class="entry-date">
+            <time datetime="2024">Fall 2024</time>
+          </div>
+          <div class="entry-content">
+            <h3>Recipe Recommender App</h3>
+            <p class="org">Personal Project · <a href="#">GitHub</a></p>
+            <p>Built with Python and Flask. Uses collaborative filtering to suggest meals based on pantry ingredients.</p>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Skills Section -->
+      <section>
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>D3.js</li>
+          <li>HTML &amp; CSS</li>
+          <li>SQL</li>
+          <li>pandas</li>
+          <li>scikit-learn</li>
+          <li>Git</li>
+          <li>R</li>
+          <li>Figma</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>Last updated <time datetime="2025">2025</time> · Made with HTML &amp; CSS</p>
+    </footer>
+
+  </body>
+</html>
