@@ -4,3 +4,37 @@ body {
   margin-inline: max(1em, (100% - 100ch) / 2);
   padding-inline: 1em;
 }
+
+/* Accent color for the whole site */
+:root {
+  --color-accent: oklch(65% 50% 0);
+}
+
+/* Nav bar layout */
+nav {
+  display: flex;
+  margin-bottom: 1em;
+  border-bottom: 1px solid oklch(80% 3% 200);
+  accent-color: var(--color-accent);
+}
+
+nav a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+}
+
+/* Highlight hovered link */
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+  padding-bottom: 0.1em;
+}
+
+/* Highlight current page link */
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.1em;
+}
