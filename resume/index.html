@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jane Doe: CV / Resume</title>
+    <title>Ja-Chan Lu: Resume</title>
     <link rel="stylesheet" href="../style.css" />
     <style>
       body {
@@ -14,40 +14,33 @@
         line-height: 1.6;
         color: #222;
       }
-
       nav {
         margin-bottom: 2rem;
       }
-
       nav a {
         margin-right: 1.25rem;
         text-decoration: none;
         color: #1a7a5e;
         font-size: 0.95rem;
       }
-
       nav a:hover {
         text-decoration: underline;
       }
-
       header {
         border-left: 4px solid #1a7a5e;
         padding-left: 1rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
       }
-
       header h1 {
         margin: 0 0 0.25rem;
         font-size: 2rem;
         font-weight: 500;
       }
-
       header p {
         margin: 0.2rem 0;
         color: #555;
         font-size: 0.95rem;
       }
-
       h2 {
         font-size: 1.1rem;
         font-weight: 500;
@@ -56,52 +49,49 @@
         padding-bottom: 0.3rem;
         margin-top: 2rem;
         margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
       }
-
       article {
         display: flex;
         gap: 1.25rem;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.4rem;
       }
-
       .entry-date {
-        min-width: 100px;
-        font-size: 0.85rem;
+        min-width: 110px;
+        font-size: 0.82rem;
         color: #777;
         padding-top: 2px;
         text-align: right;
         flex-shrink: 0;
       }
-
       .entry-content {
         flex: 1;
       }
-
       .entry-content h3 {
         margin: 0 0 2px;
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: 600;
       }
-
       .entry-content .org {
-        font-size: 0.9rem;
+        font-size: 0.88rem;
         color: #555;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.35rem;
       }
-
-      .entry-content p {
-        margin: 0;
-        font-size: 0.9rem;
-        color: #444;
-      }
-
       .entry-content ul {
         margin: 0.25rem 0 0;
         padding-left: 1.25rem;
-        font-size: 0.9rem;
-        color: #444;
+        font-size: 0.88rem;
+        color: #333;
       }
-
+      .entry-content ul li {
+        margin-bottom: 0.2rem;
+      }
+      .entry-content p {
+        margin: 0;
+        font-size: 0.88rem;
+        color: #333;
+      }
       .skills-list {
         display: flex;
         flex-wrap: wrap;
@@ -110,15 +100,13 @@
         list-style: none;
         margin: 0;
       }
-
       .skills-list li {
         background: #e6f5f0;
         color: #0f6e56;
-        font-size: 0.85rem;
+        font-size: 0.82rem;
         padding: 4px 12px;
         border-radius: 20px;
       }
-
       footer {
         margin-top: 3rem;
         font-size: 0.8rem;
@@ -131,129 +119,154 @@
 
   <body>
 
-    <!-- Navigation menu -->
     <nav>
-      <a href="/">Home</a>
-      <a href="/projects/">Projects</a>
-      <a href="/contact/">Contact</a>
-      <a href="/cv/">CV</a>
-      <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub ↗</a>
+      <a href="./">Home</a>
+      <a href="./projects/">Projects</a>
+      <a href="./contact/">Contact</a>
+      <a href="./resume/">Resume</a>
+      <a href="https://github.com/jachan056" target="_blank">GitHub ↗</a>
     </nav>
 
-    <!-- Page header with your name and contact info -->
     <header>
-      <h1>Jane Doe</h1>
-      <p>📧 jane@email.com</p>
-      <p>📍 San Diego, CA</p>
-      <p>🔗 <a href="https://github.com/YOUR_USERNAME" target="_blank">github.com/janedoe</a></p>
-      <p>Data science student passionate about visualization and storytelling with data.</p>
+      <h1>Ja-Chan Lu</h1>
+      <p>📧 <a href="mailto:jachanlu056@gmail.com">jachanlu056@gmail.com</a></p>
+      <p>🔗 <a href="https://github.com/jachan056" target="_blank">github.com/jachan056</a></p>
+      <p>Data Analyst with a strong foundation in Python, SQL, and data visualization. Passionate about using data-driven insights to support strategic decisions.</p>
     </header>
 
     <main>
 
-      <!-- Education Section -->
+      <!-- Skills -->
       <section>
-        <h2>Education</h2>
-
-        <article>
-          <div class="entry-date">
-            <time datetime="2022">2022</time> –
-            <time datetime="2026">2026</time>
-          </div>
-          <div class="entry-content">
-            <h3>B.S. Data Science</h3>
-            <p class="org">University of California San Diego</p>
-            <p>GPA: 3.8 · Relevant coursework: DSC 106, DSC 80, DSC 100, CSE 101</p>
-          </div>
-        </article>
-
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>Pandas</li>
+          <li>NumPy</li>
+          <li>scikit-learn</li>
+          <li>PyTorch</li>
+          <li>SQL</li>
+          <li>SQLite</li>
+          <li>CTEs &amp; Window Functions</li>
+          <li>Java</li>
+          <li>Web Scraping</li>
+          <li>Data Visualization</li>
+          <li>Machine Learning</li>
+          <li>APIs</li>
+          <li>Git &amp; GitHub</li>
+          <li>Jupyter Notebooks</li>
+          <li>BeeKeeper Studio</li>
+        </ul>
       </section>
 
-      <!-- Experience Section -->
-      <section>
-        <h2>Experience</h2>
-
-        <article>
-          <div class="entry-date">
-            <time datetime="2025-06">Jun 2025</time> –
-            <time datetime="2025-09">Sep 2025</time>
-          </div>
-          <div class="entry-content">
-            <h3>Data Science Intern</h3>
-            <p class="org">Some Cool Company · San Francisco, CA</p>
-            <ul>
-              <li>Built interactive dashboards using D3.js and Python</li>
-              <li>Reduced reporting time by 40% through automated pipelines</li>
-            </ul>
-          </div>
-        </article>
-
-        <article>
-          <div class="entry-date">
-            <time datetime="2024-01">Jan 2024</time> –
-            present
-          </div>
-          <div class="entry-content">
-            <h3>Undergraduate Research Assistant</h3>
-            <p class="org">UCSD Cognitive Science Lab</p>
-            <ul>
-              <li>Assisted with data collection and cleaning for HCI studies</li>
-              <li>Wrote Python scripts for statistical analysis</li>
-            </ul>
-          </div>
-        </article>
-
-      </section>
-
-      <!-- Projects Section -->
+      <!-- Projects -->
       <section>
         <h2>Projects</h2>
 
         <article>
           <div class="entry-date">
-            <time datetime="2025">Spring 2025</time>
+            <time datetime="2024">2024</time>
           </div>
           <div class="entry-content">
-            <h3>Climate Change Visualization</h3>
-            <p class="org">DSC 106 Final Project · <a href="#">Live site</a></p>
-            <p>Interactive D3.js scrollytelling piece exploring 50 years of global temperature data.</p>
+            <h3>NBA Veteran Performance Analysis</h3>
+            <p class="org">SQL Data Project · <a href="https://github.com/jachan056/NBA-Data-Analysis-Project-SQL-" target="_blank">GitHub ↗</a></p>
+            <ul>
+              <li>Engineered a custom performance scoring metric in SQL, synthesizing 6 statistical categories to quantify veteran efficiency vs. league averages</li>
+              <li>Used advanced SQL (CTEs, window functions, complex joins) to clean data, build summary tables, and rank 100+ players across all positions</li>
+              <li>Derived insight that versatility and strategic play define veteran success, not just athleticism</li>
+            </ul>
           </div>
         </article>
 
         <article>
           <div class="entry-date">
-            <time datetime="2024">Fall 2024</time>
+            <time datetime="2024">2024</time>
           </div>
           <div class="entry-content">
-            <h3>Recipe Recommender App</h3>
-            <p class="org">Personal Project · <a href="#">GitHub</a></p>
-            <p>Built with Python and Flask. Uses collaborative filtering to suggest meals based on pantry ingredients.</p>
+            <h3>League of Legends Data Analysis</h3>
+            <p class="org"><a href="https://github.com/jachan056/LeagueDataAnalysis" target="_blank">GitHub ↗</a></p>
+            <ul>
+              <li>Developed a data pipeline to scrape and clean 10,000+ match records using Python (Pandas) for champion win-rate analysis</li>
+              <li>Built an interactive Streamlit dashboard to visualize champion-tier relationships and patch meta trends</li>
+              <li>Conducted statistical analysis to identify key performance indicators differentiating champion tiers</li>
+            </ul>
+          </div>
+        </article>
+
+        <article>
+          <div class="entry-date">
+            <time datetime="2024">2024</time>
+          </div>
+          <div class="entry-content">
+            <h3>NBA Data Analysis &amp; Predictive Modeling</h3>
+            <p class="org"><a href="https://github.com/jachan056/NBA-Proj-Public" target="_blank">GitHub ↗</a></p>
+            <ul>
+              <li>Collaborated in a team of 4–5 to analyze NBA player and team performance data using Python</li>
+              <li>Cleaned and processed large datasets using pandas; visualized insights with matplotlib and seaborn</li>
+              <li>Built predictive models and presented findings in a final report and video presentation</li>
+            </ul>
           </div>
         </article>
 
       </section>
 
-      <!-- Skills Section -->
+      <!-- Experience -->
       <section>
-        <h2>Skills</h2>
-        <ul class="skills-list">
-          <li>Python</li>
-          <li>JavaScript</li>
-          <li>D3.js</li>
-          <li>HTML &amp; CSS</li>
-          <li>SQL</li>
-          <li>pandas</li>
-          <li>scikit-learn</li>
-          <li>Git</li>
-          <li>R</li>
-          <li>Figma</li>
-        </ul>
+        <h2>Experience</h2>
+
+        <article>
+          <div class="entry-date">
+            <time datetime="2024-01">Jan 2024</time> –
+            <time datetime="2024-04">Apr 2024</time>
+          </div>
+          <div class="entry-content">
+            <h3>Event Coordinator</h3>
+            <p class="org">UCSD Cantonese Culture Club · La Jolla, CA</p>
+            <ul>
+              <li>Managed cultural events from conception to execution, optimizing planning to increase member engagement</li>
+              <li>Converted cultural concepts into interactive formats to educate members and foster cultural awareness</li>
+            </ul>
+          </div>
+        </article>
+
+        <article>
+          <div class="entry-date">
+            <time datetime="2022-06">Jun 2022</time> –
+            <time datetime="2023-09">Sep 2023</time>
+          </div>
+          <div class="entry-content">
+            <h3>Intern Tutor</h3>
+            <p class="org">Chinatown Service Center · Los Angeles, CA</p>
+            <ul>
+              <li>Tutored elementary and middle-school students in English and mathematics using Jupyter Notebooks and interactive exercises</li>
+              <li>Led a cohort of six 6th-grade students with collaborative projects and weekly review sessions, resulting in improved test scores</li>
+              <li>Facilitated communication for ESL students by translating and simplifying academic concepts</li>
+            </ul>
+          </div>
+        </article>
+
+        <article>
+          <div class="entry-date">
+            <time datetime="2022-08">Aug 2022</time> –
+            <time datetime="2023-06">Jun 2023</time>
+          </div>
+          <div class="entry-content">
+            <h3>College Peer Counselor</h3>
+            <p class="org">Downtown Magnets High School · Los Angeles, CA</p>
+            <ul>
+              <li>Updated the College Peer website with upcoming college visits and fly-in opportunities using Git and HTML</li>
+              <li>Notified students about PIQ writing workshops and college fairs via email newsletters, boosting attendance</li>
+              <li>Supported 12 peer counselors through project documentation guidance, leading to timely application submissions</li>
+            </ul>
+          </div>
+        </article>
+
       </section>
 
     </main>
 
     <footer>
-      <p>Last updated <time datetime="2025">2025</time> · Made with HTML &amp; CSS</p>
+      <p>Last updated <time datetime="2025">2025</time> · Ja-Chan Lu</p>
     </footer>
 
   </body>
