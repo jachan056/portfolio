@@ -1,26 +1,36 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="style" href="style.css">
-</head>
-<body>
-    <h1>Ja-Chan Lu</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, magni delectus dolores odio distinctio molestias, ut quis ea alias excepturi sunt voluptatum soluta? Tempore harum quia eveniet iste ipsa aut?</p>
-    <img src="Images/tungtung.jfif" alt="Tung Tung Tung Sahur">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ja-Chan Lu: Contact</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
     <nav>
-        <a href="/portfolio/">Home</a>
-        <a href="/portfolio/projects/">Projects</a>
-        <a href="/portfolio/contact/" class="current">Contact</a>
-        <a href="/portfolio/resume/">Resume</a>
-        <a href="https://github.com/jachan056" target="_blank">GitHub</a>
-   </nav>
-    <form action="mailto:YOUR@EMAIL.COM" method="POST" enctype="text/plain">
-        <label>Your Email: <input type="email" name="email"></label>
-        <label>Subject: <input name="subject"></label>
-        <label>Message: <textarea name="body"></textarea></label>
-        <button>Send</button>
+      <a href="/portfolio/">Home</a>
+      <a href="/portfolio/projects/">Projects</a>
+      <a href="/portfolio/contact/" class="current">Contact</a>
+      <a href="/portfolio/resume/">Resume</a>
+      <a href="https://github.com/jachan056" target="_blank">GitHub ↗</a>
+    </nav>
+
+    <h1>Contact Me</h1>
+
+    <form action="mailto:jachanlu056@gmail.com" method="POST" enctype="text/plain">
+      <label>
+        Your Email:
+        <input type="email" name="email" />
+      </label>
+      <label>
+        Subject:
+        <input name="subject" />
+      </label>
+      <label>
+        Message:
+        <textarea name="body" rows="6"></textarea>
+      </label>
+      <button type="submit">Send Message</button>
     </form>
-</body>
+  </body>
 </html>
