@@ -100,3 +100,30 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   text-wrap: balance;
 }
+
+/* Resume layout */
+.resume-section {
+  margin-block: 2em;
+}
+
+.resume-section h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  border-bottom: 1px solid oklch(80% 3% 200);
+  padding-bottom: 0.3em;
+}
+
+.resume-entry {
+  display: grid;
+  grid-template-columns: 10em 1fr;
+  gap: 0.5em 1em;
+  margin-block: 1em;
+}
+
+.resume-entry time {
+  color: oklch(50% 3% 200);
+  font-size: 0.85em;
+  text-align: right;
+}
