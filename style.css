@@ -1,23 +1,43 @@
+/* ===========================
+   GLOBAL
+=========================== */
+:root {
+  --color-accent: oklch(65% 50% 0);
+  color-scheme: light dark;
+}
+ 
 body {
   font: 100%/1.5 system-ui;
   max-width: 100ch;
   margin-inline: max(1em, (100% - 100ch) / 2);
   padding-inline: 1em;
+  accent-color: var(--color-accent);
 }
-
-/* Accent color for the whole site */
-:root {
-  --color-accent: oklch(65% 50% 0);
+ 
+/* ===========================
+   HEADINGS
+=========================== */
+h1 {
+  font-size: 400%;
+  line-height: 1.1;
+  text-wrap: balance;
 }
-
-/* Nav bar layout */
+ 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+ 
+/* ===========================
+   NAV BAR
+=========================== */
 nav {
   display: flex;
   margin-bottom: 1em;
-  border-bottom: 1px solid oklch(80% 3% 200);
-  accent-color: var(--color-accent);
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom: 1px solid var(--border-color);
 }
-
+ 
 nav a {
   flex: 1;
   text-decoration: none;
@@ -25,105 +45,163 @@ nav a {
   text-align: center;
   padding: 0.5em;
 }
-
-/* Highlight hovered link */
+ 
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
   padding-bottom: 0.1em;
 }
-
-/* Highlight current page link */
+ 
 nav a.current {
-  border-bottom: 0.4em solid oklch(80% 3% 200);
+  border-bottom: 0.4em solid var(--border-color);
   padding-bottom: 0.1em;
 }
-
-/* Contact form */
+ 
+/* ===========================
+   DARK MODE SWITCHER
+=========================== */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
+}
+ 
+.color-scheme select {
+  font: inherit;
+}
+ 
+/* ===========================
+   CONTACT FORM
+=========================== */
 form {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1em;
   max-width: 50ch;
 }
-
+ 
 form input,
 form textarea,
-form button {
+form button,
+form select {
   font: inherit;
   box-sizing: border-box;
   width: 100%;
 }
-
+ 
 form label {
   display: grid;
   grid-template-columns: subgrid;
   grid-column: 1 / -1;
 }
-
+ 
 form button {
   grid-column: 1 / -1;
+  cursor: pointer;
+  padding: 0.5em;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 0.25em;
 }
-
-/* Projects grid */
+ 
+form button:hover {
+  opacity: 0.85;
+}
+ 
+/* ===========================
+   PROJECTS GRID
+=========================== */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
   gap: 1em;
 }
-
+ 
 .projects article {
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
   margin: 0;
 }
-
+ 
 .projects article h2 {
   margin: 0;
+  font-size: 1.1rem;
 }
-
+ 
 .projects article img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
-
-/* Better heading hierarchy */
-h1 {
-  font-size: 400%;
-  line-height: 1.1;
-  text-wrap: balance;
+ 
+.projects article p {
+  font-size: 0.9rem;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.1;
-  text-wrap: balance;
-}
-
-/* Resume layout */
+ 
+/* ===========================
+   RESUME / CV
+=========================== */
 .resume-section {
   margin-block: 2em;
 }
-
+ 
 .resume-section h2 {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-accent);
-  border-bottom: 1px solid oklch(80% 3% 200);
+  border-bottom: 1px solid oklch(50% 10% 200 / 40%);
   padding-bottom: 0.3em;
+  margin-bottom: 1em;
 }
-
+ 
 .resume-entry {
   display: grid;
   grid-template-columns: 10em 1fr;
-  gap: 0.5em 1em;
+  gap: 0.25em 1em;
   margin-block: 1em;
 }
-
+ 
 .resume-entry time {
-  color: oklch(50% 3% 200);
   font-size: 0.85em;
   text-align: right;
+  padding-top: 0.15em;
+}
+ 
+.resume-entry h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+ 
+.resume-entry .org {
+  font-size: 0.88rem;
+  grid-column: 2;
+}
+ 
+.resume-entry ul {
+  margin: 0.25em 0 0;
+  padding-left: 1.25em;
+  font-size: 0.88rem;
+  grid-column: 2;
+}
+ 
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+.skills-list li {
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  padding: 0.25em 0.75em;
+  border-radius: 20px;
 }
