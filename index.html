@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ja-Chan Lu — Data Scientist</title>
+  <meta name="description" content="Data scientist specializing in ML pipelines, SQL engineering, and interactive data visualization. UCSD." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Inter:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── SIDEBAR NAV ── -->
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-name">
+        <span class="name-en">Ja-Chan Lu</span>
+        <span class="name-zh">盧嘉燦</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+      <div class="sidebar-links">
+        <a href="https://github.com/jachan056" target="_blank" rel="noopener" class="ext-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+        <a href="assets/resume.pdf" target="_blank" class="ext-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Resume
+        </a>
+        <a href="mailto:jachanlu056@gmail.com" class="ext-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          Email
+        </a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+        <span class="toggle-track"><span class="toggle-knob"></span></span>
+        <span id="theme-label">Light mode</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ── MAIN CONTENT ── -->
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <canvas id="stream-canvas" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Data Scientist · UCSD</p>
+        <h1 class="hero-title">Turning messy<br>data into<br><em>clear answers.</em></h1>
+        <p class="hero-sub">
+          I build end-to-end ML pipelines, SQL engines, and interactive
+          visualizations — from 117k-row esports datasets to climate
+          projection dashboards. Trilingual: English, Mandarin, Cantonese.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#projects" class="btn-primary">See my work</a>
+          <a href="https://github.com/jachan056" target="_blank" rel="noopener" class="btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section-header">
+        <span class="section-label">Projects</span>
+        <p class="section-note">Filtered by: All</p>
+      </div>
+
+      <div class="filter-row">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ml">ML / Analytics</button>
+        <button class="filter-btn" data-filter="sql">SQL</button>
+        <button class="filter-btn" data-filter="viz">Visualization</button>
+        <button class="filter-btn" data-filter="finance">Finance</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- FEATURED: LoL -->
+        <article class="project-card featured" data-tags="ml">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-badge badge-ml">ML · Analytics</span>
+              <span class="card-badge badge-featured">Featured</span>
+            </div>
+            <h2 class="card-title">League of Legends — carry potential ML pipeline</h2>
+            <p class="card-desc">
+              Built an end-to-end pipeline on 117,000+ professional match records from Oracle's Elixir. EDA, bivariate analysis, permutation hypothesis testing, and a Decision Tree classifier. Deployed as a public web report.
+            </p>
+            <div class="card-finding">
+              <span class="finding-label">Key finding</span>
+              Early-game gold differential at 15 minutes is the single strongest predictor of match outcome — team composition matters far less than resource control.
+            </div>
+            <div class="card-stats">
+              <div class="stat-item">
+                <span class="stat-num">117k+</span>
+                <span class="stat-label">match records</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">90.3%</span>
+                <span class="stat-label">classifier accuracy</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">5+</span>
+                <span class="stat-label">ML techniques</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-skills">
+              <span class="skill">Python</span><span class="skill">Pandas</span><span class="skill">scikit-learn</span><span class="skill">Hypothesis testing</span><span class="skill">Decision Tree</span>
+            </div>
+            <a href="https://github.com/jachan056/LeagueDataAnalysis" target="_blank" rel="noopener" class="card-link">View project ↗</a>
+          </div>
+        </article>
+
+        <!-- Equity crash study -->
+        <article class="project-card" data-tags="finance ml">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-badge badge-finance">Finance · Quant</span>
+              <span class="card-badge badge-wip">In progress</span>
+            </div>
+            <h2 class="card-title">Multi-sector equity crash study</h2>
+            <p class="card-desc">
+              Longitudinal analysis in R of 39 equities across 5 sectors (Tech, Healthcare, Energy, Financial, Consumer Staples) from 2019–2023. Max drawdown calculations, crash-period segmentation across COVID-19 and 2022 bear market.
+            </p>
+            <div class="card-footer">
+              <div class="card-skills">
+                <span class="skill">R</span><span class="skill">tidyverse</span><span class="skill">ggplot2</span><span class="skill">tidyquant</span><span class="skill">Time series</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- NBA SQL -->
+        <article class="project-card" data-tags="sql">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-badge badge-sql">SQL · Database</span>
+            </div>
+            <h2 class="card-title">NBA veteran efficiency — SQLite ranking engine</h2>
+            <p class="card-desc">
+              Designed a multi-table SQLite database to rank 2024-25 season veterans by a custom per-minute relative efficiency score benchmarked against positional league averages across all 5 positions.
+            </p>
+            <div class="card-finding">
+              <span class="finding-label">Key finding</span>
+              Versatility and court vision define veteran success — not athleticism. Older veterans who excel in assists-per-minute outrank higher scorers in the efficiency model.
+            </div>
+            <div class="card-footer">
+              <div class="card-skills">
+                <span class="skill">SQL</span><span class="skill">SQLite</span><span class="skill">CTEs</span><span class="skill">Window functions</span><span class="skill">nba_api</span>
+              </div>
+              <a href="https://github.com/jachan056/NBA-Data-Analysis-Project-SQL-" target="_blank" rel="noopener" class="card-link">View project ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- NBA ML COGS 108 -->
+        <article class="project-card" data-tags="ml">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-badge badge-ml">ML · Team project</span>
+            </div>
+            <h2 class="card-title">NBA player performance — predictive modeling (COGS 108)</h2>
+            <p class="card-desc">
+              Led a team of 4–5 through the full research lifecycle: proposal, EDA, modeling, and final presentation. Designed modular code with shared data pipelines and a reproducible results directory.
+            </p>
+            <div class="card-footer">
+              <div class="card-skills">
+                <span class="skill">Python</span><span class="skill">Pandas</span><span class="skill">scikit-learn</span><span class="skill">Matplotlib</span><span class="skill">Seaborn</span>
+              </div>
+              <a href="https://github.com/jachan056/NBA-Proj-Public" target="_blank" rel="noopener" class="card-link">View project ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- NYPD viz -->
+        <article class="project-card" data-tags="viz">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-badge badge-viz">Data viz · Ethics</span>
+            </div>
+            <h2 class="card-title">NYPD complaint patterns — persuasive vs deceptive chart design</h2>
+            <p class="card-desc">
+              Dual-argument web report on 35 years of NYPD CCRB data across 79 precincts. Built competing visualizations arguing for and against institutional causation. Analyzed the ethics of axis truncation, outlier annotation, and normalization framing.
+            </p>
+            <div class="card-footer">
+              <div class="card-skills">
+                <span class="skill">HTML</span><span class="skill">D3-adjacent</span><span class="skill">Chart ethics</span><span class="skill">Data storytelling</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Climate dashboard -->
+        <article class="project-card" data-tags="viz">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-badge badge-viz">Visualization · Climate</span>
+            </div>
+            <h2 class="card-title">CMIP6 global temperature — projection dashboard</h2>
+            <p class="card-desc">
+              HTML/CSS data report visualizing NCAR CESM2 global temperature projections from 1850 to 2100 under the SSP5-8.5 high-emissions scenario. Region classification, dataset summary cards, and typographic layout for accessible science communication.
+            </p>
+            <div class="card-footer">
+              <div class="card-skills">
+                <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">CMIP6</span><span class="skill">Data storytelling</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- D3 Precipitation -->
+        <article class="project-card" data-tags="viz">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-badge badge-viz">D3.js · Interactive</span>
+            </div>
+            <h2 class="card-title">Global precipitation shifts — scrollytelling D3.js visualization</h2>
+            <p class="card-desc">
+              Co-built a scrollytelling web visualization on CMIP6/CESM2 climate data. Interactive D3.js bar chart with a draggable threshold line, animated rain effects, and a 1980–2010 seasonal precipitation baseline.
+            </p>
+            <div class="card-footer">
+              <div class="card-skills">
+                <span class="skill">D3.js</span><span class="skill">JavaScript</span><span class="skill">Scrollytelling</span><span class="skill">Climate data</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Study platform -->
+        <article class="project-card" data-tags="ml">
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-badge badge-sql">Systems · Education</span>
+            </div>
+            <h2 class="card-title">DSC 102 interactive study platform — 1,900-line solo build</h2>
+            <p class="card-desc">
+              Solo-built interactive HTML study tool covering 11 modules: computer organization, memory hierarchy, pipelining, distributed systems, Spark/MapReduce, MLOps. Searchable Q&A accordion, sticky nav, progress dots, dark mode.
+            </p>
+            <div class="card-footer">
+              <div class="card-skills">
+                <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span><span class="skill">Technical writing</span><span class="skill">Distributed systems</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section-header">
+        <span class="section-label">Skills</span>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3 class="skill-group-title">Languages</h3>
+          <div class="skill-list">
+            <div class="skill-row"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">SQL</span><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">R</span><div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-fill" style="width:68%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Java</span><div class="skill-bar"><div class="skill-fill" style="width:55%"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Libraries & Tools</h3>
+          <div class="tag-cloud">
+            <span class="tag-item">Pandas</span>
+            <span class="tag-item">NumPy</span>
+            <span class="tag-item">scikit-learn</span>
+            <span class="tag-item">PyTorch</span>
+            <span class="tag-item">D3.js</span>
+            <span class="tag-item">tidyverse</span>
+            <span class="tag-item">ggplot2</span>
+            <span class="tag-item">tidyquant</span>
+            <span class="tag-item">SQLite</span>
+            <span class="tag-item">Jupyter</span>
+            <span class="tag-item">Git</span>
+            <span class="tag-item">BeeKeeper Studio</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Domains</h3>
+          <div class="tag-cloud">
+            <span class="tag-item">Machine learning</span>
+            <span class="tag-item">Statistical analysis</span>
+            <span class="tag-item">Data visualization</span>
+            <span class="tag-item">Financial analysis</span>
+            <span class="tag-item">Database design</span>
+            <span class="tag-item">Hypothesis testing</span>
+            <span class="tag-item">Time series</span>
+            <span class="tag-item">EDA</span>
+            <span class="tag-item">MLOps</span>
+            <span class="tag-item">Distributed systems</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section-header">
+        <span class="section-label">About</span>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a data science student at UC San Diego with a background in tutoring, community service, and multilingual communication. I grew up in Los Angeles speaking Cantonese and Mandarin at home, which taught me early that the same idea can look completely different depending on how it's framed — a lesson I apply to every visualization I build.
+          </p>
+          <p>
+            My work spans the full data pipeline: I've scraped and cleaned raw API data, built custom SQL engines, trained classifiers, and designed web reports that communicate findings to non-technical audiences. I'm especially interested in the intersection of rigorous analysis and clear visual storytelling.
+          </p>
+          <p>
+            Outside of data: I've played piano through MTAC level 9, competed in CyberPatriots on the Linux team, and coordinated cultural events at UCSD's Cantonese Culture Club.
+          </p>
+        </div>
+        <div class="about-sidebar">
+          <div class="about-card">
+            <h4 class="about-card-title">Education</h4>
+            <div class="about-item">
+              <span class="about-item-name">UC San Diego</span>
+              <span class="about-item-sub">Data Science, B.S.</span>
+            </div>
+            <div class="about-item">
+              <span class="about-item-name">Downtown Magnets HS</span>
+              <span class="about-item-sub">Class of 2023 · UC GPA 4.182</span>
+            </div>
+          </div>
+          <div class="about-card">
+            <h4 class="about-card-title">Languages</h4>
+            <div class="about-item"><span class="about-item-name">English</span><span class="about-item-badge">Fluent</span></div>
+            <div class="about-item"><span class="about-item-name">Mandarin 普通話</span><span class="about-item-badge">Fluent</span></div>
+            <div class="about-item"><span class="about-item-name">Cantonese 廣東話</span><span class="about-item-badge">Fluent</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Ja-Chan Lu · 盧嘉燦 · <a href="mailto:jachanlu056@gmail.com">jachanlu056@gmail.com</a></p>
+      <p class="footer-sub">Built from scratch — HTML, CSS, JS. No frameworks.</p>
+    </footer>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
